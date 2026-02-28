@@ -1,0 +1,22 @@
+header {
+  position: fixed;
+  top: 0px;
+  height: 120px;
+  left: 0px;
+  right: 0px;
+
+  display: flex;
+  flex-direction: row;
+  column-gap: 0px;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-right: 50px;
+  padding-left: 50px;
+
+  background-color: rgba(129, 133, 174, 0.15);
+  border: none;
+  border-bottom: 1px solid rgba(136, 139, 140, 0.05);
+
+  backdrop-filter: blur(6px);
+}
