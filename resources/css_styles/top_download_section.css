@@ -1,0 +1,36 @@
+.top_download_section {
+  display: flex;
+  flex-direction: column ;
+  column-gap: 210px;
+
+
+  margin-top: 7.5vh;
+  display: flex;
+  align-items: center;
+}
+
+
+h2 {
+  font-family: Unbounded;
+  color: #F7E6FF;
+  font-size: 60px;
+  font-weight: 600;
+
+  margin: 0px;
+}
+
+.download_amigo_button_white_background {
+  position: relative;
+
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 25px;
+}
+
+
+.top_download_section_horizontal_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
