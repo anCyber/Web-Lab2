@@ -1,7 +1,6 @@
 .top_download_section {
   display: flex;
-  flex-direction: column ;
-  column-gap: 210px;
+  flex-direction: column;
 
 
   margin-top: 7.5vh;
@@ -13,24 +12,117 @@
 h2 {
   font-family: Unbounded;
   color: #F7E6FF;
-  font-size: 60px;
-  font-weight: 600;
+  font-size: clamp(12px, 3.8vw, 100px);
+  font-weight: 400;
 
   margin: 0px;
+  margin-bottom: 5vh;
 }
 
+.top_download_section_horizontal_flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  height: 12vw;
+  width: 75%;
+  margin-bottom: 8vh;
+}
+
+.image_top_download_section {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  opacity: 0.9;
+  border-radius: 12%;
+  
+  box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
 .download_amigo_button_white_background {
+  max-width: 50%;
+  flex: 1;
   position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
 
   background-color: #D9D9D9;
   border: none;
-  border-radius: 25px;
+  border-radius: 2.5vw;
+  height: 80%;
+
+  box-shadow: 0px 0px 6px 6px rgba(22, 22, 22, 0.15);
+  cursor: pointer;
 }
 
 
-.top_download_section_horizontal_grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.download_amigo_green_button {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 80%;
+
+  border-radius: 3vw;
+  border-top-left-radius: 2.5vw;
+  border-top-right-radius: 2.5vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.75vw;
+  background-color: #10CD32;
+  border: none;
+
+  box-shadow: 0px 0px 6px 6px rgba(22, 22, 22, 0.30);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.download_amigo_green_button:hover {
+  background-color: #0ca628;
+  box-shadow: 0px 0px 8px 8px rgba(255, 255, 255, 0.25);
+}
+.download_amigo_green_button:active,
+.download_amigo_button_white_background:has(.download_amigo_green_button:active)  {
+  opacity: 0.8;
 }
 
 
+
+
+.download_amigo_button_bottom_section {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5vw;
+  padding-bottom: 0.35vh;
+}
+
+
+.download_amigo_green_button_text {
+  font-family: Arial;
+  font-size: clamp(12px, 4.5vw, 100px);
+  color: rgba(255, 255, 255, 1.0);
+}
+
+.download_amigo_green_button_image {
+  aspect-ratio: 1 / 1;
+  height: 3.5vw;
+}
+
+
+.download_amigo_white_button_text {
+  font-family: Arial;
+  color: #1A1A1A;
+  font-size: clamp(6px, 1vw, 100px);
+}
+
+.download_amigo_white_button_image {
+  aspect-ratio: 1 / 1;
+  height: 1.25vw;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.20);
+}
