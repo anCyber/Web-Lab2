@@ -3,10 +3,18 @@
   margin: 0px auto;
 
   display: grid;
-  grid-template: auto auto / 1fr 2fr;
+  grid-template: auto auto / 1.25fr 2fr;
   gap: 6.7%;
 }
-
+@media screen and (max-width: 700px) {
+  .promo_blocks_grid {
+    width: 75%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    gap: 3%;
+  }
+}
 
 
 
@@ -27,11 +35,14 @@
 .advertisement_section_foreground {
   display: flex;
   flex-direction: column;
+  row-gap: min(5vh, 2vw);
   align-items: center;
   justify-content: center;
 
   width: 100%;
   height: 100%;
+  padding: 2vh;
+  box-sizing: border-box;
 
   background-color: rgba(251, 248, 255, 0.025);
   border-radius: 2vw;
@@ -46,29 +57,31 @@
 h3 {
   font-family: Unbounded;
   color: #F7E6FF;
-  font-size: clamp(8px, 2.75vw, 100px);
+  font-size: clamp(8px, 2.4vw, 100px);
   font-weight: 400;
   margin: 0px;
+  text-align: center;
 }
 
 .advertisement_section_text {
+  width: 75%;
   font-family: Unbounded;
-  font-size: clamp(6px, 1.10vw, 100px);
+  font-size: clamp(6px, 1.25vw, 100px);
   font-weight: 200;
   color: rgba(246, 246, 246, 0.7);
 }
 
 .gdz_image {
-  width: 45%;
-  height: 60%;
+  width: 12vw;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: center;
 
   border: none;
-  border-radius: 4vw;
+  border-radius: 2vw;
 
-  box-shadow: 0px 0px 16px 16px rgba(255, 255, 255, 0.35),
-              0px 0px 6px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 0.75vw 0.75vw rgba(255, 255, 255, 0.25),
+              0px 0px 0.4vw 0.4vw rgba(0, 0, 0, 0.15);
 }
 
 
@@ -92,15 +105,23 @@ h3 {
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.20);
   padding: 2vw;
 }
+@media screen and (max-width: 700px) {
+  .reasons_section_background {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+}
 
 .reasons_section_foreground {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  row-gap: min(5vh, 2vw);
 
   width: 100%;
   height: 100%;
+  padding: 2vh;
+  box-sizing: border-box;
 
   background-color: rgba(251, 248, 255, 0.025);
   border-radius: 2vw;
@@ -109,10 +130,18 @@ h3 {
 }
 
 
+ol {
+  width: 85%;
+  padding: 0px;
+  margin: 0px;
+}
+
 li {
   color: rgba(246, 246, 246, 0.70);
   font-family: Unbounded;
   font-weight: 200;
+  font-size: clamp(6px, 1.25vw, 100px);
+  margin: 0px;
 }
 
 
@@ -121,9 +150,10 @@ li {
 
 .reviews_section_background {
   display: grid;
-  grid-template: repeat(2, auto) / repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  gap: 2vh 2vw;
+  row-gap: 2vh;
+  column-gap: 2vw;
 
   grid-area: 2 / 1 / span 1 / span 2;
   background-color: rgba(251, 248, 255, 0.05);
@@ -133,9 +163,13 @@ li {
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.20);
   padding: 2vw;
 }
-@media screen and (max-width: 1000px) {
-  .reasons_section_background {
-    grid-template: repeat(3, auto) / repeat(2, 1fr);
+@media screen and (max-width: 700px) {
+  .reviews_section_background {
+    grid-area: 3 / 1 / span 1 / span 1;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
   }
 }
 
@@ -155,6 +189,11 @@ li {
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.125);
   backdrop-filter: blur(2px);
 }
+@media screen and (max-width: 700px) {
+  .review_title_foreground {
+    grid-area: 1 / 1 / span 1 / span 2;
+  }
+}
 
 
 .review_section_foreground {
@@ -163,9 +202,9 @@ li {
   align-items: center;
   justify-content: top;
 
-  background-color: rgba(251, 248, 255, 0.025);
+  background-color: rgba(251, 248, 255, 0.015);
   border-radius: 2vw;
-  box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(2px);
 
   padding: 2vh;
@@ -180,7 +219,7 @@ h4 {
   font-size: clamp(8px, 1vw, 100px);
   font-weight: 400;
   margin: 0px;
-  padding-bottom: 1vh;
+  padding-bottom: 1.75vh;
   text-decoration: underline;
   text-underline-offset: 0.5vh;
 }
@@ -188,7 +227,7 @@ h4 {
 
 .review_section_text {
   font-family: Unbounded;
-  font-size: clamp(4px, 0.85vw, 100px);
+  font-size: clamp(4px, 0.8vw, 100px);
   font-weight: 200;
   color: rgba(246, 246, 246, 0.7);
 }
