@@ -5,12 +5,12 @@
   display: grid;
   grid-template: auto auto / 1.25fr 2fr;
   gap: 6.7%;
+  row-gap: 9%;
+  padding-bottom: 20vh;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 920px) {
   .promo_blocks_grid {
-    width: 75%;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
+    grid-template: repeat(3, auto) / auto;
     grid-auto-flow: column;
     gap: 3%;
   }
@@ -22,6 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   grid-area: 1 / 1 / span 1 / span 1;
   background-color: rgba(251, 248, 255, 0.05);
@@ -35,9 +36,9 @@
 .advertisement_section_foreground {
   display: flex;
   flex-direction: column;
-  row-gap: min(5vh, 2vw);
+  row-gap: min(3.5vh, 1.5vw);
   align-items: center;
-  justify-content: center;
+  justify-content: top;
 
   width: 100%;
   height: 100%;
@@ -62,6 +63,24 @@ h3 {
   margin: 0px;
   text-align: center;
 }
+
+
+.advertisement_content_bottom_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  row-gap: min(5vh, 2vw);
+}
+@media screen and (max-width: 920px) {
+  .advertisement_content_bottom_section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: min(5vh, 2vw);
+  }
+}
+
 
 .advertisement_section_text {
   width: 75%;
@@ -105,7 +124,7 @@ h3 {
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.20);
   padding: 2vw;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 920px) {
   .reasons_section_background {
     grid-area: 2 / 1 / span 1 / span 1;
   }
@@ -116,7 +135,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  row-gap: min(5vh, 2vw);
+  row-gap: min(3.5vh, 1.5vw);
 
   width: 100%;
   height: 100%;
@@ -151,7 +170,7 @@ li {
 .reviews_section_background {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
+
   row-gap: 2vh;
   column-gap: 2vw;
 
@@ -163,12 +182,19 @@ li {
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.20);
   padding: 2vw;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 920px) {
   .reviews_section_background {
     grid-area: 3 / 1 / span 1 / span 1;
 
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+  }
+}
+@media screen and (max-width: 640px) {
+  .reviews_section_background { 
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
     grid-auto-flow: column;
   }
 }
@@ -189,9 +215,14 @@ li {
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.125);
   backdrop-filter: blur(2px);
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 920px) {
   .review_title_foreground {
     grid-area: 1 / 1 / span 1 / span 2;
+  }
+}
+@media screen and (max-width: 640px) {
+  .review_title_foreground {
+    grid-area: 1 / 1 / span 1 / span 1;
   }
 }
 

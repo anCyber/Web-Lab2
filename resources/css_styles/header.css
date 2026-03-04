@@ -4,10 +4,8 @@ header {
   left: 0px;
   right: 0px;
 
-  display: flex;
-  justify-content: space-between;
-  column-gap: 3vw;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
 
   padding: 1.5vh 2.5vw;
 
@@ -46,6 +44,7 @@ header {
 
 
 .header_center_title_background {
+  grid-area: 1 / 2 / 1 / span 6;
   justify-self: center;
   display: flex;
   align-items: center;

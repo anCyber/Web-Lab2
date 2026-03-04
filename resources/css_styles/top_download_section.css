@@ -83,7 +83,7 @@ h2 {
   transition: all 0.25s;
 }
 .download_amigo_green_button:hover {
-  background-color: #0ca628;
+  background-color: #24cf43;
   box-shadow: 0px 0px 8px 8px rgba(255, 255, 255, 0.25);
 }
 .download_amigo_green_button:active,
