@@ -5,6 +5,9 @@ body {
   scrollbar-width: none;
   cursor: wait;
   background-image: url("/resources/imgs/twisted_hue_background_combined.png");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 ::-webkit-scrollbar {
