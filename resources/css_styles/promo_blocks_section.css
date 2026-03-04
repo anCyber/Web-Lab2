@@ -3,16 +3,16 @@
   margin: 0px auto;
 
   display: grid;
-  grid-template: auto auto / 1.25fr 2fr;
-  gap: 6.7%;
-  row-gap: 9%;
-  padding-bottom: 20vh;
+  grid-template: repeat(2, auto) / 1.25fr 2fr;
+  column-gap: 5vw;
+  row-gap: 6.5vw;
 }
 @media screen and (max-width: 920px) {
   .promo_blocks_grid {
+    width: 75%;
     grid-template: repeat(3, auto) / auto;
     grid-auto-flow: column;
-    gap: 3%;
+    row-gap: 5vw;
   }
 }
 
@@ -239,6 +239,12 @@ li {
   backdrop-filter: blur(2px);
 
   padding: 2vh;
+}
+@media screen and (max-width: 920px) {
+  .review_section_foreground {
+    width: 80%;
+    margin: 0px auto;
+  }
 }
 
 

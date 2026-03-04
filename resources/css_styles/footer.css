@@ -110,18 +110,30 @@ footer {
   background-color: #6E71FF;
   border-color: transparent;
 }
+.footer_discord_button:hover .discord_icon_path { 
+  fill: #E6E4ED;
+}
 
 .footer_telegram_button:hover {
   background-color: #578FFF;
   border-color: transparent;
+}
+.footer_telegram_button:hover .telegram_icon_path { 
+  fill: #E6E4ED;
 }
 
 .footer_youtube_button:hover {
   background-color: #FF1616;
   border-color: transparent;
 }
+.footer_youtube_button:hover .youtube_icon_path { 
+  fill: #E6E4ED;
+}
 
 .footer_github_button:hover {
   background-color: #272525;
   border-color: transparent;
+}
+.footer_github_button:hover .github_icon_path { 
+  fill: #E6E4ED;
 }
